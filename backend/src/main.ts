@@ -15,6 +15,9 @@ async function bootstrap() {
 
   // La ruta en que se sirve la documentación
   SwaggerModule.setup('docs', app, document);
+
+  // cors
+  app.enableCors();
   await app.listen(3000);
 }
 bootstrap();

@@ -89,6 +89,10 @@ export class BooksService {
   }
 
   async filterBookByGenre(genre: string) {
-    return this.bookModel.find({ genre: genre });
+    return this.bookModel.find({
+      genre: {
+        $regex: genre,
+      },
+    });
   }
 }
