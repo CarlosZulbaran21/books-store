@@ -1,0 +1,23 @@
+.svg-heart:hover {
+    background-color: #e1306c; /* Rojo de Instagram */
+}
+  
+.svg-heart:hover {
+    color: #fff; /* Color blanco al hacer hover */
+}
+
+.svg-sad {
+    background-color: #E4E4E4; /* Fondo gris claro */
+    color: #555555; /* Color de corazón gris oscuro */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  }
+  
+  .svg-sad:hover {
+    background-color: #B0B0B0; /* Fondo gris más oscuro al hacer hover */
+    color: #444444; /* Color de corazón gris aún más oscuro al hacer hover */
+  }
+
+  .svg-sad, .svg-heart, .svg-username{
+    min-height: 40px ;
+    min-width: 40px ;
+  }

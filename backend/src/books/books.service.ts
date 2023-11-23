@@ -16,14 +16,21 @@ export class BooksService {
   }
 
   async findAll(): Promise<Book[]> {
-    return this.bookModel.find().populate({ path: 'comments.username' }).exec();
+    return (
+      this.bookModel
+        .find()
+        // .populate({ path: 'comments.username' })
+        .exec()
+    );
   }
 
   async findOne(id: string): Promise<Book> {
-    return this.bookModel
-      .findOne({ _id: id })
-      .populate({ path: 'comments.username' })
-      .exec();
+    return (
+      this.bookModel
+        .findOne({ _id: id })
+        // .populate({ path: 'comments.username' })
+        .exec()
+    );
   }
 
   async update(id: string, updateBookDto: UpdateBookDto): Promise<Book> {
@@ -48,7 +55,6 @@ export class BooksService {
       const book: BookDocument = await this.bookModel.findById(bookId);
 
       if (book) {
-        console.log(book);
         const comment = book.comments.find(
           (c) => c['_id'].toString() === commentId,
         );
@@ -67,7 +73,6 @@ export class BooksService {
       const book: BookDocument = await this.bookModel.findById(bookId);
 
       if (book) {
-        console.log(book);
         const comment = book.comments.find(
           (c) => c['_id'].toString() === commentId,
         );

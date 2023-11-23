@@ -3,12 +3,7 @@ import { User } from '../../users/schemas/user.schema';
 
 export class CreateCommentDto {
   @ApiProperty({ example: 'Esperaba más' })
-  readonly title: string;
-
-  @ApiProperty({
-    example: 3,
-  })
-  readonly stars: number;
+  readonly title?: string;
 
   @ApiProperty({
     example:
