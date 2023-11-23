@@ -152,6 +152,9 @@ export default function Book() {
                     </span>
                   </div>
                   <p className="leading-relaxed">{book.description}</p>
+                  <strong className="ml-0 text-sm title-font text-gray-500 tracking-widest">
+                    Genre: {book.genre}
+                  </strong>
                   <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                     <div className="flex">
                       <span className="mr-3">Color</span>
